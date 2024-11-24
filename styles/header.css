@@ -1,0 +1,86 @@
+
+/* Menu */
+.cabeçalho__menu-hamburguer {
+   width: 24px;
+   height: 24px;
+   background-image: url("../img/Menu.svg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain; /* Ajusta a escala do ícone */
+   display: inline-block;
+   cursor: pointer;
+}
+
+/* Cabeçalho principal */
+.cabeçalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    position: relative;
+}
+
+/* Caixa do titulo */
+.container {
+    display: flex;
+    align-items: center;
+}
+
+/* Imagens dentro do container */
+.container__imagem {
+    padding: 1em;
+} 
+
+/* Estilo de menu suspenso */
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+    left: 0;
+    background-color: var(--branco);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    border-radius: 8px;
+}
+
+/* Mostrar o menu quando o menu for marcado */
+.container__botao:checked ~ .lista-menu{
+    display: block;
+}
+
+/* Estilo dos itens do menu */
+.lista-menu__titulo, 
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+/* Estilo do titulo */
+.lista-menu__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+/* Estilo das categorias links */
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    padding: 0.5em 0;
+}
+
+/* adicionar hover ao link */
+.lista-menu__link:hover {
+    color: var(--laranja);
+    text-decoration: underline;
+}
+
+.container__botao {
+    display: none; /* caixa de seleção do menu */
+}
